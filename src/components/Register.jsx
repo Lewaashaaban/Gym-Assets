@@ -65,10 +65,9 @@ const Register = () => {
           >
             Register
           </Button>
+
           <Link to="/login">
-            <Button color="secondary">
-              Login <i className="fas fa-arrow-circle-up"></i>
-            </Button>
+            <Button color="secondary">Login</Button>
           </Link>
         </form>
       </div>

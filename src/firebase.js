@@ -1,6 +1,10 @@
 // src/firebase.js
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  sendPasswordResetEmail,
+} from "firebase/auth"; // Import sendPasswordResetEmail
 import { getFirestore } from "firebase/firestore";
 
 // Firebase configuration
@@ -11,15 +15,16 @@ const firebaseConfig = {
   storageBucket: "assets-for-gym.appspot.com",
   messagingSenderId: "1054626854443",
   appId: "1:1054626854443:web:3acd6e0c48bdff5a389c6e",
-  measurementId: "G-XSW0K2E8K0"
+  measurementId: "G-XSW0K2E8K0",
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log("Firebase app initialized");
 
 // Initialize Firebase services
 export const auth = getAuth(app);
-console.log("Firebase auth initialized");
 export const db = getFirestore(app);
-console.log("Firestore initialized");
 export const provider = new GoogleAuthProvider();
+
+// Export sendPasswordResetEmail for use in other files
+export { sendPasswordResetEmail };

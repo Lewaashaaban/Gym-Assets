@@ -54,9 +54,13 @@ const Login = () => {
           >
             Login
           </Button>
+          <Link to="/forgot-password">
+            <Button color="secondary">Forgot Password?</Button>
+          </Link>
+
           <Link to="/register">
             <Button href="#text-buttons" color="secondary">
-              Register<i className="fas fa-arrow-circle-down"></i>
+              Sign up
             </Button>
           </Link>
         </form>

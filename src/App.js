@@ -8,6 +8,7 @@ import {
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
+import FPassword from "./components/FPassword";
 import Register from "./components/Register";
 import Nav from "./components/Nav";
 import UserCart from "./components/UserCart";
@@ -52,45 +53,34 @@ function App() {
 
   return (
     <Router>
-      {!user ? (
-        <div>
-          <Login />
-          <Register />
-        </div>
-      ) : (
-        <div className="App">
-          <Nav />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/Contact">
-              <Contact />
-            </Route>
-            <Route path="/Register">
-              <Register />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/userCart">
-              <UserCart />
-            </Route>
-            <Route path="/payment">
-              <Payment />
-            </Route>
-            <Route path="/confirmation">
-              <Confirmation />
-            </Route>
-            <Route path="*">
-              <Redirect to="/" />
-            </Route>
-            <Route path="/admin">
-              <Admin />
-            </Route>
-          </Switch>
-        </div>
-      )}
+      <div className="App">
+        {!user ? (
+          // Render Login and Register for non-logged-in users
+          <>
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/forgot-password" component={FPassword} />
+            {/* Add a Redirect to ensure they can't access other routes */}
+            <Redirect to="/login" />
+          </>
+        ) : (
+          <>
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/Contact" component={Contact} />
+              <Route path="/userCart" component={UserCart} />
+              <Route path="/payment" component={Payment} />
+              <Route path="/confirmation" component={Confirmation} />
+              <Route path="/admin" component={Admin} />
+              {/* Redirect any other routes to the home page */}
+              <Route path="*">
+                <Redirect to="/" />
+              </Route>
+            </Switch>
+          </>
+        )}
+      </div>
     </Router>
   );
 }
