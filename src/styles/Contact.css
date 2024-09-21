@@ -1,0 +1,107 @@
+.contact {
+  width: 100%;
+}
+
+.contact_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
+  top: -20px;
+}
+
+.data {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  padding: 10px;
+  padding-left: 20px;
+  height: 80px;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.data:hover {
+  transform: scale(1.05);
+}
+
+.contact_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+  padding: 40px;
+  padding-top: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact_inputs {
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  width: 100%; /* Full width for inputs */
+  max-width: 800px; /* Limit maximum width */
+  margin-bottom: 20px; /* Space below inputs */
+}
+
+.contact_inputs > .MuiTextField-root {
+  margin-bottom: 10px; /* Space between inputs */
+  width: 100%; /* Full width for each input */
+}
+
+.messageArea {
+  height: 140px;
+  width: 100%; /* Full width for textarea */
+  max-width: 800px; /* Limit maximum width */
+  margin-bottom: 20px; /* Space below textarea */
+}
+
+.sendMessageBtn {
+  width: 100%; /* Full width for button */
+  max-width: 800px; /* Limit maximum width */
+}
+
+.contact_heading {
+  margin-bottom: 20px; /* Space below heading */
+}
+
+@media screen and (max-width: 480px) {
+  .contact_header {
+    width: 100%;
+    padding: 10px;
+    top: 10px;
+    flex-direction: column;
+  }
+
+  .data {
+    width: 100%;
+    margin-top: 10px;
+    border: 10px solid lightgray;
+  }
+
+  .contact_main {
+    margin: 0;
+    padding: 10px;
+    padding-top: 0px;
+  }
+
+  .contact_inputs {
+    margin-bottom: 20px; /* Space below inputs */
+  }
+
+  .messageArea {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px; /* Space below textarea */
+  }
+
+  .sendMessageBtn {
+    width: 100%;
+  }
+}
+#outlined-basic {
+  padding-left: 10px;
+}
+.messageArea {
+  padding-left: 10px;
+}

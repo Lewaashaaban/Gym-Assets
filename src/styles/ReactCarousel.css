@@ -1,0 +1,32 @@
+.carousel {
+  height: 300px; /* Keep the height consistent */
+  background-color: #f8f8f8; /* Add a background color to differentiate from white controls */
+  position: relative; /* Ensure positioning for absolute elements */
+}
+
+.carousel_innerDiv {
+  height: 100%; /* Full height for inner container */
+  display: flex; /* Flexbox to center the image */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.carousel_innerDiv img {
+  max-height: 100%; /* Ensure image fits within the container height */
+  max-width: 100%; /* Ensure image fits within the container width */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.carousel .control-prev, .carousel .control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for controls */
+  border-radius: 50%; /* Round buttons */
+}
+
+.carousel .control-prev:before, .carousel .control-next:before {
+  color: #fff; /* White arrow color */
+}
+
+.carousel .thumbs-wrapper {
+  display: none; /* Hide thumbnail controls if not needed */
+}

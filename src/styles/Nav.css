@@ -1,0 +1,138 @@
+#cartIcon {
+  position: relative;
+  top: -67px;
+  left: -3px;
+}
+.cartCount {
+  background: #fff !important;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+}
+.cartCount > p {
+  color: red;
+  position: relative;
+  top: -23.3px;
+  left: 3.3px;
+  font-size: 13px;
+  font-weight: 500 !important;
+}
+.brand-logo {
+  padding-left: 20px !important;
+  letter-spacing: 1px;
+}
+.brand-logo > img {
+  position: relative;
+  top: 10px;
+  width: 40px;
+  box-shadow: 0px 0px 5px rgb(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+#menu {
+  display: none;
+}
+#MenuIcon {
+  display: none;
+}
+#logoutBtn {
+  margin-top: 80px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 480px) {
+  #cartIcon {
+    position: relative;
+    top: -75px;
+    left: -3px;
+  }
+  .cartCount {
+    background: #fff !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    left: 0px;
+    top: 100px;
+  }
+  .cartCount > p {
+    color: red;
+    position: relative;
+    top: -25.8px;
+    left: 4px;
+    font-size: 13px;
+    font-weight: 500 !important;
+    z-index: 99;
+  }
+  .brand-logo {
+    letter-spacing: 0px;
+  }
+  .brand-logo {
+    height: 20px !important;
+    position: relative;
+    top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    object-fit: contain;
+    left: 50px !important;
+    font-size: 20px !important;
+  }
+  .brand-logo > img {
+    position: relative;
+    top: 7px;
+    width: 30px;
+    box-shadow: none;
+  }
+  #nav-mobile {
+    display: none;
+  }
+  #MenuIcon {
+    display: block;
+    position: absolute;
+    left: 375px;
+    top: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #menu {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    position: fixed;
+    color: #fff !important;
+    right: 200px;
+    left: 450px;
+    top: 55px;
+    z-index: 10000;
+    line-height: 60px;
+    transform: 0.5s;
+    height: 100vh;
+  }
+  #menu ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -55px !important;
+    line-height: 70px;
+  }
+  #menu.active {
+    right: 0px;
+    left: 0px;
+    top: 55px;
+    background: #ff7171;
+    z-index: 10000;
+  }
+  #cancle_icon {
+    color: red;
+    opacity: 1;
+    position: relative;
+    right: -120px;
+    top: 50px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  #adminNav {
+    position: relative;
+    top: 60px;
+  }
+}

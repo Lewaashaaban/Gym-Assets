@@ -1,0 +1,45 @@
+/* Container styling for centering and layout */
+.payment-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 2rem; /* Add some padding around the container */
+}
+
+.payment-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Dark gray color for the heading */
+}
+
+.payment-page form {
+  width: 100%;
+  max-width: 500px; /* Limit the width of the form */
+  background-color: #fff; /* White background for the form */
+  padding: 2rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.payment-page .MuiTextField-root {
+  margin-bottom: 1rem; /* Space between fields */
+}
+
+.payment-page button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: red; /* Green color for the button */
+  border: none;
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-page button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}

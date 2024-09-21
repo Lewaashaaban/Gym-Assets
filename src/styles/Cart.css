@@ -1,0 +1,90 @@
+.cart {
+  padding: 20px;
+}
+
+/* Container for each product in the cart */
+.cart_products {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+/* Styles for the product image */
+.cart_products > img {
+  width: 150px; /* Adjusted width for better spacing */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without distortion */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+/* Container for product details */
+.product_details {
+  flex: 1; /* Allow details to take up remaining space */
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Styles for the product name */
+.product_details > p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Styles for the product price */
+.product_details > h6 {
+  margin: 5px 0 10px 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Styles for the button */
+.product_details > button {
+  align-self: flex-start; /* Align button to the top of the details section */
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 480px) {
+  .cart_products {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .cart_products > img {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 150px; /* Limit max width */
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .product_details {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .product_details > p {
+    font-size: 14px;
+  }
+
+  .product_details > h6 {
+    font-size: 16px;
+  }
+
+  .product_details > button {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}

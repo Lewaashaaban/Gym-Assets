@@ -1,0 +1,71 @@
+.products_div {
+  display: grid;
+  grid-template-columns: repeat(3, 100fr);
+  margin-top: 20px;
+}
+.addtocartBtn {
+  position: relative;
+  left: 0px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-links a {
+  margin: 5px 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 2px rgba(248, 245, 245, 0.5);
+  text-decoration: none;
+  color: #fff;
+}
+.social-links a i {
+  font-size: 20px;
+}
+.social-links a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.social-links a:nth-child(1) {
+  background: linear-gradient(0deg, #000000, #252525);
+}
+.social-links a:nth-child(2) {
+  background: linear-gradient(0deg, #0e9cf5, #41d6ff);
+}
+.social-links a:nth-child(3) {
+  background: linear-gradient(0deg, #3c5a99, #577ac7);
+}
+.social-links a:nth-child(4) {
+  background: linear-gradient(45deg, #405de6, #833ab4, #fd1d1d);
+}
+.social-links a:nth-child(5) {
+  background: linear-gradient(0deg, #006192, #019deb);
+}
+@media screen and (max-width: 480px) {
+  .products_div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 500px) and (max-width: 1028px) {
+  .card {
+    margin: 20px;
+  }
+  .product_image {
+    height: 100px; /* Apply this height only for screens larger than 1028px */
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .product_image {
+    height: 300px; /* Apply this height only for screens larger than 1028px */
+  }
+  .card {
+    margin: 90px;
+  }
+}

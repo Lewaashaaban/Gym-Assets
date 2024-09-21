@@ -1,0 +1,66 @@
+.card {
+  word-wrap: break-word;
+  width: 350px;
+  line-height: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 8px; /* Added rounded corners */
+  background-color: #fff; /* Ensured card background is white */
+  margin: 20px; /* Adjusted margin for better spacing */
+  overflow: hidden; /* Ensure no overflow outside the card */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.card-image > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  border-bottom: 1px solid lightgray; /* Border at the bottom of the image */
+  padding: 10px;
+}
+
+.card-title {
+  color: #000;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: bold; /* Makes the title stand out */
+}
+
+.card-content {
+  font-size: 13px;
+  padding: 10px;
+  color: #333; /* Slightly lighter text color */
+}
+
+.card-content .price {
+  font-size: 18px; /* Larger font size for the price */
+  font-weight: bold; /* Bold price for emphasis */
+  color: #e53935; /* Distinct color for the price */
+  margin-top: 10px; /* Spacing between content and price */
+}
+
+.card-action {
+  text-align: center;
+}
+
+.addtocartBtn {
+  left: 0px !important;
+  font-size: 14px; /* Ensured button text size is appropriate */
+  /* margin-left: auto; Ensures button is aligned to the right */
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin: 10px; /* Reduced margin for smaller screens */
+  }
+
+  .addtocartBtn {
+    font-size: 12px; /* Smaller font size for mobile screens */
+  }
+}
+
+
